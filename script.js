@@ -7,5 +7,8 @@ button.addEventListener('click', () => {
     main.classList.add('apaga-tela')
     audio.play()
     // dialog.showModal()
-    setTimeout(() => dialog.showModal(), 2000)
+    setTimeout(() => {
+        dialog.showModal()
+        newFireWorkStar(200, 200)
+    }, 2000)
 })

@@ -10,8 +10,10 @@ body:has(main.apaga-tela) {
     animation: apagaTela ease 2s;
 }
 
-body:has(main.apaga-tela) button {
-    animation: apagaTela ease 2s;
+main.apaga-tela>button {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 2s ease;
 }
 
 dialog::backdrop {
@@ -27,7 +29,7 @@ dialog[open] {
     background-color: black;
 }
 
-dialog[open] > img {
+dialog[open]>img {
     animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -37,6 +39,7 @@ dialog[open] > img {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         background-color: black;
@@ -47,9 +50,11 @@ dialog[open] > img {
     0% {
         opacity: 0;
     }
+
     20% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
