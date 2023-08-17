@@ -29,8 +29,8 @@ dialog[open] {
   background-color: black;
 }
 
-dialog[open]>img {
-  animation: fadeInAnimation ease 5s;
+dialog[open] > img {
+  animation: aparecerCachorrinho ease 12s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -46,12 +46,12 @@ dialog[open]>img {
   }
 }
 
-@keyframes fadeInAnimation {
+@keyframes aparecerCachorrinho {
   0% {
     opacity: 0;
   }
 
-  20% {
+  40% {
     opacity: 0;
   }
 
