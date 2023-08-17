@@ -1,0 +1,56 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body:has(main.apaga-tela) {
+    animation: apagaTela ease 2s;
+}
+
+body:has(main.apaga-tela) button {
+    animation: apagaTela ease 2s;
+}
+
+dialog::backdrop {
+    background-color: black;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+dialog[open] {
+    background-color: black;
+}
+
+dialog[open] > img {
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes apagaTela {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        background-color: black;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
